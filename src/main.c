@@ -13,6 +13,8 @@
 #include <stdio.h>
 #include <assert.h>
 #include <time.h>
+#include <CUnit/CUnit.h>
+
 #include "DividAndConquer/dichotomie.h"
 #include "Knapsack/knapsack.h"
 
@@ -20,13 +22,13 @@
  * @brief 
  * 
  */
-int test_dichotomie(){
+void test_dichotomie(){
 	int size = 20;
 	int value = 2;
 	int array[size];
 	create_Table(array, size);
-	int ret = find_by_dichotomy(array, size, value);
-	return ret;
+	find_by_dichotomy(array, size, value);
+	CU_ASSERT(find_by_dichotomy(array, size, value) == 2);
 }
 
 /**
@@ -55,14 +57,41 @@ void test_knapsack(){
  * 
  * @return int 
  */
+int test_init()
+{
+    return 0;
+}
+
+/**
+ * @brief 
+ * 
+ * @return int 
+ */
+int test_cleanup()
+{
+    return 0;
+}
+
+/**
+ * @brief 
+ * 
+ * @return int 
+ */
 int main()
 {
 
-	test_dichotomie();
-	assert(test_dichotomie() == 2);
-	test_knapsack();
-	// assert(put_In_Bag());
+	CU_initialize_registry();
+    
+	CU_pSuite *tests = CU_add_suite("Tests", test_init, test_cleanup);
+	
+	CU_add_test(tests, "Test Dichotomie", test_dichotomie);
+	
+	CU_basic_run_tests();
+    test_cleanup();
 
+
+	// test_knapsack();
+	// assert(put_In_Bag());
 
 	return EXIT_SUCCESS;
 }
