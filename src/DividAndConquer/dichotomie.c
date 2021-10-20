@@ -76,13 +76,11 @@ int find_by_dichotomy(int array[], int size_t, int value)
         {
             min = middle;
             middle = (max + min) / 2;
-            printf("\nmid haut: %d ", middle);
         }
         else
         {
             max = middle;
             middle = (max + min) / 2;
-            printf("\nmid bas: %d ", middle);
         }
     }
 
