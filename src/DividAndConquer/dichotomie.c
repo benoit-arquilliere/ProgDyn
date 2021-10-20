@@ -12,7 +12,6 @@
 #include "dichotomie.h"
 #include <stdio.h>
 
-
 /**
  * @brief Create a Table object
  * 
@@ -45,13 +44,6 @@ void create_Table(int array[], int size)
         array[i] = array[indexMin];
         array[indexMin] = temp;
     }
-
-    //Affichage du tableau
-    for (int j = 0; j < size-1; j++)
-    {
-        printf("%d / ", array[j]);
-    }
-
 }
 
 /**
@@ -69,8 +61,7 @@ int find_by_dichotomy(int array[], int size_t, int value)
     int max = size_t;
     int middle = (max + min) / 2;
 
-    // printf("%d %d %d Tableau ", min, max, middle);
-    while ((min != max-1) && (array[middle] != value))
+    while ((min != max - 1) && (array[middle] != value))
     {
         if (array[middle] < value)
         {
@@ -84,7 +75,8 @@ int find_by_dichotomy(int array[], int size_t, int value)
         }
     }
 
-    if(min == max-1){
+    if (min == max - 1)
+    {
         return -1;
     }
     return middle;
