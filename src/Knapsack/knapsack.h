@@ -14,10 +14,12 @@
 
 typedef struct
 {
-    int quality;
-    int price;
+    int poids;
+    int valeur;
+    float moyenne;
 } Item;
 
 #endif /*KNAPSACK_H*/
 
-int sort_Items();
+void sort_Items(Item array[], int size);
+void put_In_Bag(Item array[], int size, int capacity);
