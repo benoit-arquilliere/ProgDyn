@@ -18,7 +18,8 @@ int main()
 {
 	int size = 20;
 	int value = 5;
-	int array = create_Table(size);
+	int array[size];
+	create_Table(array, size);
 
 	find_by_dichotomy(array, size, value);
 

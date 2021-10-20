@@ -14,5 +14,5 @@
 
 #endif /*DICHOTOMIE_H*/
 
-int create_Table();
+void create_Table(int array[], int size);
 int find_by_dichotomy(int array[], int size_t, int value);

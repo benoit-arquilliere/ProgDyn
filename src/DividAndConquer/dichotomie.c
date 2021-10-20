@@ -9,50 +9,50 @@
  * 
  */
 
-
 #include "dichotomie.h"
 #include <stdio.h>
+
 
 /**
  * @brief Create a Table object
  * 
+ * @param array 
  * @param size 
- * @return int 
  */
-int create_Table(int size){
-    int array[size];
+void create_Table(int array[], int size)
+{
     int temp;
     int indexMin;
-    
+
     //Generation du tableau
-    for(int i=0; i<size-1; i++){
+    for (int i = 0; i < size - 1; i++)
+    {
         array[i] = rand() % size;
     }
 
     //Tri du tableau
-    for(int i=0; i<size-1; i++)
+    for (int i = 0; i < size - 1; i++)
     {
         indexMin = i;
-        for(int j=i; j<size; j++)
+        for (int j = i; j < size; j++)
         {
-            if(array[j]<array[indexMin])
+            if (array[j] < array[indexMin])
             {
                 indexMin = j;
             }
         }
-        temp = array[i]; 
+        temp = array[i];
         array[i] = array[indexMin];
         array[indexMin] = temp;
     }
 
     //Affichage du tableau
-    for (int j = 0; j < 19; j++){
+    for (int j = 0; j < size-1; j++)
+    {
         printf("%d / ", array[j]);
     }
-    // printf("%s Tableau", array);
-    return array;
-}
 
+}
 
 /**
  * @brief 
@@ -62,27 +62,32 @@ int create_Table(int size){
  * @param value 
  * @return int 
  */
-int find_by_dichotomy(int array[], int size_t, int value) {
+int find_by_dichotomy(int array[], int size_t, int value)
+{
 
     int min = 0;
     int max = size_t;
     int middle = (max + min) / 2;
 
-
     // printf("%d %d %d Tableau ", min, max, middle);
-    while(min != max || middle != value){
-        if(value > array[middle]){
+    while ((min != max-1) && (array[middle] != value))
+    {
+        if (array[middle] < value)
+        {
             min = middle;
             middle = (max + min) / 2;
-            printf("%d ", middle);
+            printf("\nmid haut: %d ", middle);
         }
-        else{
+        else
+        {
             max = middle;
             middle = (max + min) / 2;
-            printf("%d ", middle);
+            printf("\nmid bas: %d ", middle);
         }
     }
 
-    printf("%d", middle);
+    if(min == max-1){
+        return -1;
+    }
     return middle;
 }
