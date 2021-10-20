@@ -49,7 +49,7 @@ int create_Table(int size){
     for (int j = 0; j < 19; j++){
         printf("%d / ", array[j]);
     }
-    printf("%s Tableau", array);
+    // printf("%s Tableau", array);
     return array;
 }
 
@@ -69,7 +69,7 @@ int find_by_dichotomy(int array[], int size_t, int value) {
     int middle = (max + min) / 2;
 
 
-    printf("%d %d %d Tableau ", min, max, middle);
+    // printf("%d %d %d Tableau ", min, max, middle);
     while(min != max || middle != value){
         if(value > array[middle]){
             min = middle;
