@@ -24,13 +24,13 @@ void create_Table(int array[], int size)
     int indexMin;
 
     //Generation du tableau
-    for (int i = 0; i < size - 1; i++)
+    for (int i = 0; i < size; i++)
     {
         array[i] = rand() % size;
     }
 
     //Tri du tableau
-    for (int i = 0; i < size - 1; i++)
+    for (int i = 0; i < size; i++)
     {
         indexMin = i;
         for (int j = i; j < size; j++)
