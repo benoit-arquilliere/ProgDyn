@@ -1,8 +1,26 @@
+/**
+ * @file main.c
+ * @author Benoit ARQUILLIERE
+ * @brief 
+ * @version 0.1
+ * @date 2021-10-20
+ * 
+ * @copyright Copyright (c) 2021
+ * 
+ */
+
+#include <stdlib.h>
 #include <stdio.h>
+#include "DividAndConquer/dichotomie.h"
+
 
 int main()
 {
-	printf("Hello World!\n");
+	int size = 20;
+	int value = 5;
+	int array = create_Table(size);
 
-	return (0);
+	find_by_dichotomy(array, size, value);
+
+	return EXIT_SUCCESS;
 }
