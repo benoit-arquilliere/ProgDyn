@@ -13,10 +13,11 @@
 #include <stdio.h>
 
 /**
- * @brief Create a Table object
+ * @brief Créer un tableau d'entiers aléatoires et 
+ * le trie par ordre croissant.
  * 
- * @param array 
- * @param size 
+ * @param array Tableau d'entiers
+ * @param size Taille du tableau
  */
 void create_Table(int array[], int size)
 {
@@ -47,12 +48,13 @@ void create_Table(int array[], int size)
 }
 
 /**
- * @brief 
+ * @brief Recherche l'index d'une valeur passé en paramètre
+ * par dichotomie.
  * 
- * @param array 
- * @param size_t 
- * @param value 
- * @return int 
+ * @param array Tableau de valeurs
+ * @param size_t Taille du tableau
+ * @param value La valeur recherché
+ * @return int Renvoie l'index de la valeur (-1 si elle n'existe pas)
  */
 int find_by_dichotomy(int array[], int size_t, int value)
 {
