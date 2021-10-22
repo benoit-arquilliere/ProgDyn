@@ -67,6 +67,7 @@ void display_Matrix(int *matrix, int size)
 }
 
 
+//FIX: Trouver le plus grand carré blanc possible dans la matrice
 void find_Pgcb(int *matrix, int size)
 {
     // for (int i = 0; i < size; i++)
