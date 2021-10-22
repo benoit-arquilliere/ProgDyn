@@ -17,9 +17,11 @@
 
 #include "DividAndConquer/dichotomie.h"
 #include "Knapsack/knapsack.h"
+#include "Pgcb/pgcb.h"
 
 /**
- * @brief 
+ * @brief Permet de tester les fonctions permettant la recherche
+ * par dichotomie.
  * 
  */
 void test_dichotomie(){
@@ -28,11 +30,13 @@ void test_dichotomie(){
 	int array[size];
 	create_Table(array, size);
 	find_by_dichotomy(array, size, value);
+	//Doit être true, car 2 est à l'index 2
 	CU_ASSERT(find_by_dichotomy(array, size, value) == 2);
 }
 
 /**
- * @brief 
+ * @brief Permet de tester les fonctions permettant de 
+ * remplir le sac à dos.
  * 
  */
 void test_knapsack(){
@@ -41,19 +45,25 @@ void test_knapsack(){
 	srand(5);
 	int nbItems = rand() % 10 + 3;
 
-	Item array[nbItems];
+	Item data[nbItems];
 
 	for (int i = 0; i < nbItems; i++){
-		array[i].poids = rand() % 10 + 1;
-		array[i].valeur = rand() % 10 + 1;
-		array[i].moyenne = (float)array[i].valeur / (float)array[i].poids;
+		data[i].poids = rand() % 10 + 1;
+		data[i].valeur = rand() % 10 + 1;
+		data[i].moyenne = (float)data[i].valeur / (float)data[i].poids;
 	}
+	
+	Item bag[nbItems];
 
-	put_In_Bag(array, nbItems, maxCapacity);
+	put_In_Bag(bag, data, nbItems, maxCapacity);
+	CU_ASSERT(bag[0].poids == 2);
+	CU_ASSERT(bag[1].poids == 3);
+	CU_ASSERT(bag[2].poids == 1);
+	CU_ASSERT(bag[3].poids == 3);
 }
 
 /**
- * @brief 
+ * @brief Inialise les tests
  * 
  * @return int 
  */
@@ -63,7 +73,7 @@ int test_init()
 }
 
 /**
- * @brief 
+ * @brief Vide les tests
  * 
  * @return int 
  */
@@ -84,14 +94,12 @@ int main()
     
 	CU_pSuite *tests = CU_add_suite("Tests", test_init, test_cleanup);
 	
-	CU_add_test(tests, "Test Dichotomie", test_dichotomie);
+	CU_add_test(tests, "Dichotomie", test_dichotomie);
+	CU_add_test(tests, "Knapsack", test_knapsack);
 	
 	CU_basic_run_tests();
     test_cleanup();
 
-
-	// test_knapsack();
-	// assert(put_In_Bag());
 
 	return EXIT_SUCCESS;
 }

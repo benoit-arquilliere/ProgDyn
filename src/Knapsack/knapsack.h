@@ -21,5 +21,5 @@ typedef struct
 
 #endif /*KNAPSACK_H*/
 
-void sort_Items(Item array[], int size);
-void put_In_Bag(Item array[], int size, int capacity);
+void sort_Items(Item data[], int size);
+void put_In_Bag(Item bag[], Item data[], int size, int capacity);
