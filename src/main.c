@@ -22,7 +22,7 @@
  *
  * @brief
  *
- * ##Le projet ProgDyn comprend 3 parties:  
+ * ###Le projet ProgDyn comprend 3 parties:  
  * 
  * - **Divid And Conquer**  
  * Il s'agit de fonctions où l'on souhaite rechercher par dichotomie une valeur dans  
@@ -53,12 +53,10 @@ int main()
 	
 	CU_add_test(tests, "Dichotomie", test_dichotomie);
 	CU_add_test(tests, "Knapsack", test_knapsack);
+	CU_add_test(tests, "Pgcb", test_pgcb);
 	
 	CU_basic_run_tests();
     test_cleanup();
-
-
-	create_Matrix(15);
 
 	return EXIT_SUCCESS;
 }

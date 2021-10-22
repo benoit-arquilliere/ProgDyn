@@ -20,3 +20,4 @@ int test_cleanup();
 
 void test_dichotomie();
 void test_knapsack();
+void test_pgcb();

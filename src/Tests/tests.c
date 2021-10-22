@@ -20,11 +20,32 @@
 #include "../Pgcb/pgcb.h"
 
 /**
+ * @brief Inialise les tests
+ * 
+ * @return int 
+ */
+int test_init()
+{
+	return 0;
+}
+
+/**
+ * @brief Vide les tests
+ * 
+ * @return int 
+ */
+int test_cleanup()
+{
+	return 0;
+}
+
+/**
  * @brief Permet de tester les fonctions permettant la recherche
  * par dichotomie.
  * 
  */
-void test_dichotomie(){
+void test_dichotomie()
+{
 	int size = 20;
 	int value = 2;
 	int array[size];
@@ -39,7 +60,8 @@ void test_dichotomie(){
  * remplir le sac à dos.
  * 
  */
-void test_knapsack(){
+void test_knapsack()
+{
 
 	int maxCapacity = 10;
 	srand(5);
@@ -47,12 +69,13 @@ void test_knapsack(){
 
 	Item data[nbItems];
 
-	for (int i = 0; i < nbItems; i++){
+	for (int i = 0; i < nbItems; i++)
+	{
 		data[i].poids = rand() % 10 + 1;
 		data[i].valeur = rand() % 10 + 1;
 		data[i].moyenne = (float)data[i].valeur / (float)data[i].poids;
 	}
-	
+
 	Item bag[nbItems];
 
 	put_In_Bag(bag, data, nbItems, maxCapacity);
@@ -63,21 +86,12 @@ void test_knapsack(){
 }
 
 /**
- * @brief Inialise les tests
+ * @brief Permet de tester les fonctions afin de trouver le
+ * plus grand carré blanc.
  * 
- * @return int 
  */
-int test_init()
+void test_pgcb()
 {
-    return 0;
-}
-
-/**
- * @brief Vide les tests
- * 
- * @return int 
- */
-int test_cleanup()
-{
-    return 0;
+	create_Matrix(10);
+	CU_ASSERT(1==1);
 }
