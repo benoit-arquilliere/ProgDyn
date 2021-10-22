@@ -79,22 +79,22 @@ void display_Matrix(int *matrix, int size)
 
 void find_Pgcb(int *matrix, int size)
 {
-    for (int i = 0; i < size; i++)
-    {
-        for (int j = 0; j < size; j++)
-        {
-            if (matrix[i * size + j] == 0)
-            {
-                printf("   ");
-            }
-        }
-    }
+    // for (int i = 0; i < size; i++)
+    // {
+    //     for (int j = 0; j < size; j++)
+    //     {
+    //         if (matrix[i * size + j] == 0)
+    //         {
+    //             printf("   ");
+    //         }
+    //     }
+    // }
 
-    int x;
-    int y;
+    // int x;
+    // int y;
 
-    if(x-1 == 0 && x-1-size == 0 && y-1 == 0){
-        int matrice[x][y]
-    }
+    // if(x-1 == 0 && x-1-size == 0 && y-1 == 0){
+    //     int matrice[x][y]
+    // }
 
 }
