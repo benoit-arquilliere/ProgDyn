@@ -3,7 +3,7 @@
  * @author Benoit ARQUILLIERE
  * @brief 
  * @version 0.1
- * @date 2021-10-20
+ * @date 2021-10-22
  * 
  * @copyright Copyright (c) 2021
  * 
@@ -17,8 +17,7 @@
  * contenant des 0. Puis remplit N cellules tirées au
  *  hasard avec la valeur 1.
  * 
- * @param size 
- * @param nbCells 
+ * @param size Taille de la matrice souhaitée
  */
 void create_Matrix(int size)
 {
@@ -37,24 +36,15 @@ void create_Matrix(int size)
         }
     }
 
-    // for (int i = 0; i < nbCells; i++)
-    // {
-    //     matrix[rand() % size][rand() % size] = 1;
-    // }
-
-    // if(nbCells > 0 ){
-    //     matrix
-    // }
-
     display_Matrix(matrix, size);
 }
 
 /**
- * @brief Permet d'afficher la matrice avec 1→ * et 0→ espace.
+ * @brief Permet d'afficher la matrice avec 1 → * et 0 → espace.
  * 
  * 
- * @param matrix 
- * @param size 
+ * @param matrix La matrice crée précedement
+ * @param size Taille de la matrice
  */
 void display_Matrix(int *matrix, int size)
 {

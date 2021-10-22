@@ -13,11 +13,11 @@
 #include <stdio.h>
 
 /**
- * @brief Permet de trier un tableau d'items en fonction de leur moyenne
- * poids / valeur.
+ * @brief Permet de trier un tableau d'items en fonction de leur 
+ * moyenne poids / valeur.
  * 
- * @param data 
- * @param size 
+ * @param data Tableau de données
+ * @param size Taille du tableau
  */
 void sort_Items(Item data[], int size)
 {
@@ -42,12 +42,12 @@ void sort_Items(Item data[], int size)
 }
 
 /**
- * @brief Met les items triés dans le sac en fonction de leur moyenne, sans 
- * dépasser la capacité maximal du sac.
+ * @brief Met les items triés dans le sac en fonction de leur moyenne, 
+ * sans dépasser la capacité maximal du sac.
  * 
- * @param data tableau d'items
- * @param size taille d'items
- * @param capacity taille du sac
+ * @param data Tableau d'items
+ * @param size Taille du tableau
+ * @param capacity Taille du sac
  */
 void put_In_Bag(Item bag[], Item data[], int size, int capacity)
 {
