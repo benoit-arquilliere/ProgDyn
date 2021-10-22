@@ -1,7 +1,7 @@
 /**
  * @file pgcb.c
  * @author Benoit ARQUILLIERE
- * @brief 
+ * @brief Rechercher dans une matrice le plus grand carré blanc (espace vide).
  * @version 0.1
  * @date 2021-10-22
  * 
@@ -15,7 +15,7 @@
 /**
  * @brief Permet de créer une matrice de taille n x n 
  * contenant des 0. Puis remplit N cellules tirées au
- *  hasard avec la valeur 1.
+ * hasard avec la valeur 1.
  * 
  * @param size Taille de la matrice souhaitée
  */

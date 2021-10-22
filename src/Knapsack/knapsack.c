@@ -1,7 +1,8 @@
 /**
  * @file knapsack.c
  * @author Benoit ARQUILLIERE
- * @brief 
+ * @brief Calcule de façon optimal le moyen de placer dans un sac 
+ * des items selon leur rapport valeur/poids.
  * @version 0.1
  * @date 2021-10-20
  * 

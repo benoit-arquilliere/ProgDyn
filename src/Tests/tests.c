@@ -1,7 +1,7 @@
 /**
  * @file tests.c
  * @author Benoit ARQUILLIERE
- * @brief 
+ * @brief Regroupe les fonctions de tests qui s'effectuent dans le main
  * @version 0.1
  * @date 2021-10-22
  * 

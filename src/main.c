@@ -18,6 +18,28 @@
 #include "Tests/tests.h"
 
 /**
+ * @mainpage ProgDyn Documentation  
+ *
+ * @brief
+ *
+ * ##Le projet ProgDyn comprend 3 parties:  
+ * 
+ * - **Divid And Conquer**  
+ * Il s'agit de fonctions où l'on souhaite rechercher par dichotomie une valeur dans  
+ * un tableau de valeur aléatoire et trié.  
+ * 
+ * - **Knapsack**  
+ * Permet de placer dans un sac (tableau) des items dont le poids et la valeur sont  
+ * variables. Il sont placés de façon à que le ratio valeur/poids soit le plus élevé  
+ * possible, et ce, sans dépasser la capacité maximal du sac.  
+ *
+ * - **Plus grand carré blanc**  
+ * Permet d'identifier le plus grand carré blanc possible d'être dessiné dans une  
+ * matrice et qu'aucun symbole ne soit touché.  
+ * 
+ */
+
+/**
  * @brief 
  * 
  * @return int 
